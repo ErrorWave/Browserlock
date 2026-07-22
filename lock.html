@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Browser locked</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>🔒 Browser locked</h1>
+    <p class="sub" id="sub">Enter your password to restore your session.</p>
+
+    <form id="form">
+      <label for="password">Password</label>
+      <input type="password" id="password" autocomplete="current-password" autofocus>
+      <button type="submit" id="submit">Unlock</button>
+    </form>
+
+    <p class="msg" id="msg"></p>
+    <p class="sub" id="restoreInfo"></p>
+  </main>
+  <script src="lock.js"></script>
+</body>
+</html>

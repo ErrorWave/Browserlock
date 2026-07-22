@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>BrowserLock settings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>BrowserLock</h1>
+    <p class="sub" id="state">Loading…</p>
+
+    <form id="form">
+      <div id="currentWrap" hidden>
+        <label for="current">Current password</label>
+        <input type="password" id="current" autocomplete="current-password">
+      </div>
+
+      <label for="next">New password</label>
+      <input type="password" id="next" autocomplete="new-password">
+
+      <label for="confirm">Confirm new password</label>
+      <input type="password" id="confirm" autocomplete="new-password">
+
+      <button type="submit" id="save">Save password</button>
+    </form>
+
+    <p class="msg" id="msg"></p>
+
+    <label class="row" for="startup">
+      <input type="checkbox" id="startup">
+      Lock automatically when the browser starts
+    </label>
+
+    <hr>
+
+    <button class="secondary" id="lockNow">Lock now</button>
+    <button class="secondary" id="clear">Remove password</button>
+
+    <p class="note">
+      <strong>What this protects against:</strong> a casual passer-by opening your browser.
+      It is <em>not</em> real security — anyone who can use your OS account can disable the
+      extension, start the browser in safe mode, or read the profile from disk. For actual
+      protection, lock your operating system account instead.
+    </p>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>

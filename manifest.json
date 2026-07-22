@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "BrowserLock",
+  "version": "1.0.0",
+  "description": "Locks the browser with a password on startup and restores your previous session once unlocked.",
+  "permissions": ["tabs", "storage"],
+  "action": {
+    "default_title": "Lock browser now"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "service_worker": "background.js",
+    "scripts": ["background.js"]
+  },
+  "commands": {
+    "lock-now": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+L"
+      },
+      "description": "Lock the browser now"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "browserlock@local.extension",
+      "strict_min_version": "115.0"
+    }
+  }
+}
